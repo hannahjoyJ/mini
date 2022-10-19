@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://use.typekit.net/ngi0rpd.css">
+    <title></title>
+    <style>
+      body {
+        background-color: #22252A;
+        width: 100%;
+        margin: 0;
+      }
+      .title {
+        font-family: source-han-sans-korean,sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 48px;
+        line-height: 1.5;
+        color: white;
+
+        display: bolck;
+
+        border: none;
+
+        width: 100%;
+        margin-top: 16px;
+        padding: 48px 48px 24px 48px;
+        box-sizing: border-box;
+
+        /*border-bottom: 1px white solid;
+        border-color: white;*/
+        background-color: transparent;
+
+        resize: none;
+        overflow: hidden;
+      }
+      .content {
+        font-family: le-monde-livre-classic-byol,serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 20px;
+        line-height: 2;
+        color: #EDEDED;
+
+        display: bolck;
+
+        border: none;
+
+        width: 100%;
+        margin: 24px 0 24px 0;
+        padding: 0 48px 48px 48px;
+        box-sizing: border-box;
+
+        background-color: transparent;
+
+        resize: none;
+        overflow: hidden;
+      }
+      input :focus{
+        outline: none;
+      }
+      textarea:focus {
+        outline: none;
+      }
+      ::placeholder {
+        color: #515661;
+      }
+    </style>
+    <script>
+
+    </script>
+  </head>
+  <body>
+    <textarea class="title" placeholder="Title" rows="1"></textarea>
+    <textarea class="content" placeholder="Type something"></textarea>
+    <script type="text/javascript">
+      textarea = document.querySelector(".title");
+      textarea.addEventListener('input', autoResize, false);
+
+        function autoResize() {
+            this.style.height = 'auto';
+            this.style.height = this.scrollHeight + 'px';
+      }
+
+      textarea = document.querySelector(".content");
+      textarea.addEventListener('input', autoResize, false);
+
+        function autoResize() {
+            this.style.height = 'auto';
+            this.style.height = this.scrollHeight + 'px';
+      }
+    </script>
+  </body>
+</html>
