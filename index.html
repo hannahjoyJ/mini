@@ -71,23 +71,28 @@
     </script>
   </head>
   <body>
-    <textarea class="title" placeholder="Title" rows="1"></textarea>
-    <textarea class="content" placeholder="Type something"></textarea>
+    <textarea class="test" rows="1">1</textarea><br>
+    <textarea class="test" rows="1">2</textarea><br>
+
+    <textarea class="title" placeholder="Title" rows="1" spellcheck="false"></textarea>
+    <textarea class="content" placeholder="Type something" spellcheck="false"></textarea>
     <script type="text/javascript">
-      textarea = document.querySelector(".title");
+
+
+      var textarea = document.querySelector(".title");
       textarea.addEventListener('input', autoResize, false);
 
-        function autoResize() {
-            this.style.height = 'auto';
-            this.style.height = this.scrollHeight + 'px';
+      function autoResize() {
+          this.style.height = 'auto';
+          this.style.height = this.scrollHeight + 'px';
       }
 
-      textarea = document.querySelector(".content");
+      var textarea = document.querySelector(".content");
       textarea.addEventListener('input', autoResize, false);
 
-        function autoResize() {
-            this.style.height = 'auto';
-            this.style.height = this.scrollHeight + 'px';
+      function autoResize() {
+          this.style.height = 'auto';
+          this.style.height = this.scrollHeight + 'px';
       }
     </script>
   </body>
